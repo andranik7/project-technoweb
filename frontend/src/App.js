@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Nav from "./components/Nav"
-import Home from "./components/Home"
+import Home from "./pages/Home"
 import {
   BrowserRouter as Router,
   Switch,
