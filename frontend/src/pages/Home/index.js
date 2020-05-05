@@ -11,7 +11,7 @@ export default class Home extends React.Component {
 
     componentDidMount() {
 
-        this.APIService.testRequest({ name: 'Test' }).then(res => {
+        this.APIService.testRequest({ name: 'HELLO' }).then(res => {
             console.log(res.data)
         })
     }
