@@ -15,8 +15,7 @@ const produitSchema = new Schema({
     date: {
         type: Date,
         default: new Date()
-    },
-    salt: String
+    }
 });
 
 
