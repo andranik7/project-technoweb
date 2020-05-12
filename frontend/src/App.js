@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Login, Register } from "./components/login/index";
 
 
 function App() {
@@ -17,7 +18,12 @@ function App() {
       <Nav />
       <Router>
         <Switch>
-
+         <Route path="/login">
+           <Login /> 
+         </Route>
+         <Route path="/register">
+           <Register /> 
+         </Route>
           <Route path="/">
             <Home />
           </Route>
