@@ -2,22 +2,24 @@ var express = require('express');
 var router = express.Router();
 var User = require('../model/user').User
 var Produit = require('../model/produit').Produit
+var Troc = require('../model/troc').Troc;
 
 
-// route poour créer un produit
-router.post('/createProduct', (req, res) => {
+
+
+// route pour créer un troc
+router.post('/createTroc', (req, res) => {
     try {
-        console.log(req.body)
-        let newProduct = req.body;
-        let p = new Produit()
-        p.proprietaire = newProduct.proprietaire;
-        p.nom = newProduct.nom;
-        p.caracteristiques = newProduct.caracteristiques;
-        p.save((err, produit) => {
+        let newTroc = req.body;
+        let t = new Troc();
+        t.donneur = newTroc.donneur;
+        t.destinataire = newTroc.destinataire;
+        t.produitsEchanges = newTroc.produitsEchanges;
+        t.save((err, troc) => {
             if (!err) {
                 res.json({
                     success: true,
-                    produit: produit
+                    troc: troc
                 })
             } else {
                 res.json({
@@ -34,20 +36,21 @@ router.post('/createProduct', (req, res) => {
     }
 })
 
-// route pour récupérer un produit par son id
-router.get('/getProduct/:produitId', (req, res) => {
+
+// router pour récupérer un troc par id
+router.get('/getTroc/:trocId', (req, res) => {
     try {
-        let produitId = req.params.produitId;
-        Produit.findById(produitId).exec((err, produit) => {
-            if (produit) {
+        let trocId = req.params.trocId;
+        Troc.findById(trocId).exec((err, troc) => {
+            if (troc) {
                 res.json({
                     success: true,
-                    produit: produit
+                    troc: troc
                 })
             } else {
                 res.json({
                     success: false,
-                    message: "le produit est introuvable"
+                    message: "troc non trouvé"
                 })
             }
         })
@@ -59,13 +62,14 @@ router.get('/getProduct/:produitId', (req, res) => {
     }
 })
 
-// route pour obtenir tous les produits
-router.get('/allProducts', (req, res) => {
+
+
+router.get('/allTrocs', (req, res) => {
     try {
-        Produit.find({}).exec((err, produits) => {
+        Troc.find({}).exec((err, trocs) => {
             res.json({
                 success: true,
-                produits: produits
+                trocs: trocs
             })
         })
     } catch (e) {

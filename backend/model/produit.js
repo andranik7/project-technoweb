@@ -10,7 +10,7 @@ const produitSchema = new Schema({
 
     nom: String,
 
-    caracteristiques: [],
+    caracteristiques: String,
 
     date: {
         type: Date,
