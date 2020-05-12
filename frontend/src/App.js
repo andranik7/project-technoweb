@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Nav from "./components/Nav"
 import Home from "./pages/Home"
+import Troc from "./pages/Troc"
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,9 +19,16 @@ function App() {
       <Router>
         <Switch>
 
+          
+
+          <Route path="/troc">
+            <Troc />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
       </Router>
 
