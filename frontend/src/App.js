@@ -10,6 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import { Login, Register } from "./components/login/index";
+import { Product } from './components/troc/product';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
          </Route>
          <Route path="/register">
            <Register /> 
+         </Route>
+         <Route path="/troc">
+           <Product /> 
          </Route>
           <Route path="/">
             <Home />
