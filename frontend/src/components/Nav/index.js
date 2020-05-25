@@ -188,20 +188,20 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="Conseils" color="inherit">
                             <CreateIcon />
-                            <Typography className={classes.title} variant="h6" noWrap>
+                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
                                 Conseils
                             </Typography>
 
                         </IconButton>
                         <IconButton aria-label="Troc" color="inherit">
                             <AutorenewIcon />
-                            <Typography className={classes.title} variant="h6" noWrap>
+                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
                                 Troc
                             </Typography>
                         </IconButton>
                         <IconButton aria-label="Conseils" color="inherit">
                             <ForumIcon />
-                            <Typography className={classes.title} variant="h6" noWrap>
+                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
                                 Forum
                             </Typography>
 

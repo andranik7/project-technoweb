@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import { Login, Register } from "./components/login/index";
 import { Product } from './components/troc/product';
-
+import { Item } from './components/troc/item';
 
 function App() {
   return (
@@ -28,6 +28,9 @@ function App() {
          <Route path="/troc">
            <Product /> 
          </Route>
+         <Route path="/item">
+            <Item />
+          </Route>
           <Route path="/">
             <Home />
           </Route>

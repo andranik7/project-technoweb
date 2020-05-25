@@ -1,11 +1,8 @@
-.wrapper {
-	width: 68em;
-}
 
 // Start here
 
 $font-color: #777;
-$light-gray: #eee;
+$light-gray: #D3D3D3;
 // product
 $product-box-shadow: 0px 0px 0px 1px $light-gray;
 
@@ -16,12 +13,20 @@ $product-box-shadow: 0px 0px 0px 1px $light-gray;
 body {
 	color: $font-color;
 	font-family: "Open Sans", sans-serif;
+	
 }
+.desc {
+	padding-top : 35px ;
+	padding-bottom : 20px;
+	
+	p{font-size : 18px;}
+	}
 
 .product-grid {
-	width: 60em;
-	margin: 2rem auto;
+	width: 80%;
+	margin: 3rem auto;
 	// TODO: apply clearfix
+
 .clearfix::after {
   content: "";
   clear: both;
@@ -33,7 +38,9 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 		}
-
+		.product-grid__product {
+			padding : 0px;
+		}
 		.product-grid__title {
 			height: auto;
 
@@ -50,9 +57,10 @@ body {
 	}
 
 	&__product-wrapper {
-		padding: 1rem;
+		padding: 2rem;
+		padding-bottom : 20px;
 		float: left;
-		width: 33.33333%;
+		width: 25%;
 	}
 
 	&__product {
@@ -71,6 +79,7 @@ body {
 
 			.product-grid__extend {
 				display: block;
+				width: 100%;
 			}
 		}
 	}
@@ -95,11 +104,12 @@ body {
 	&__title {
 		margin-top: 0.875rem;
 		display: block;
-		font-size: 1.125em;
+		font-size: 20px;
 		color: black;
 		height: 3em;
 		overflow: hidden;
 		position: relative;
+
 
 		&:after {
 			content: "";
@@ -134,8 +144,8 @@ body {
 	&__extend {
 		display: none;
 		position: absolute;
-		padding: 0 1rem 1rem 1rem;
-		margin: 0.4375rem -1rem 0;
+		padding: 1rem 0 2rem 0;
+		margin: 0.4375rem 0;
 		box-shadow: $product-box-shadow;
 		background: #fff;
 		border-radius: 0 0 4px 4px;
@@ -153,7 +163,8 @@ body {
 
 	// product description
 	&__description {
-		font-size: 0.875em;
+		font-size: 16px;
+		
 		//margin-top: .875rem;
 		margin-top: 0.4375rem;
 		margin-bottom: 0;
@@ -162,7 +173,7 @@ body {
 	// buttons
 	&__btn {
 		display: inline-block;
-		font-size: 0.875em;
+		font-size: 16px;
 		color: $font-color;
 		background: $light-gray;
 		padding: 0.5em 0.625em;
@@ -176,21 +187,44 @@ body {
 		}
 	}
 
-	&__add-to-cart {
+	&__contact {
+		font-size: 16px;
+		padding: 5px 20px;
+		border: 0;
+		background-color: #3f51b5;
 		color: #fff;
-		background:#3f51b5;
+		border-radius: 3px;
+		transition: all 250ms ease-in-out;
+		cursor: pointer;
+	  
+		&:focus {
+		  outline: none;
+		}
 
 		&:hover {
 			background: lighten(#3f51b5, 10%);
 		}
 	}
 
-	&__view {
+	&__info {
+		font-size: 16px;
+		padding: 5px 20px;
+		border: 0;
 		color: $font-color;
 		background: $light-gray;
+		border-radius: 3px;
+		transition: all 250ms ease-in-out;
+		cursor: pointer;
+	  
+		&:focus {
+		  outline: none;
+		}
 
 		&:hover {
 			background: lighten($light-gray, 10%);
 		}
 	}
+}
+.footer {
+	height : 200px;
 }

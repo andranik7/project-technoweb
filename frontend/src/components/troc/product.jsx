@@ -1,7 +1,10 @@
 import React from "react";
-import loginImg from "../../assets/login.svg";
-import './style.scss';
+import './styleproduct.scss';
 import SearchBar from 'material-ui-search-bar'
+import macbookImg from "../../assets/macbook.png";
+import vaisselleImg from "../../assets/vaisselle.png";
+import vaisselle2Img from "../../assets/vaisselle2.jpg";
+import vaisselle3Img from "../../assets/vaisselle3.PNG";
 
 
 export class Product extends React.Component {
@@ -13,48 +16,65 @@ export class Product extends React.Component {
 
         return (
           <div class="container" ref={this.props.containerRef}>
-            	<div class="desc">
+            <div class="desc">
 	          	<h1>Bienvenue sur la page de troc ! </h1>
-		          <p>Consultez les annonces :</p>
-	            </div>
-				<SearchBar
+		        <p>Consultez les annonces :</p>
+	        </div>
+			<SearchBar
     			onChange={() => console.log('onChange')}
 				onRequestSearch={() => console.log('onRequestSearch')}
 				style={{
 				margin: '0 auto',
 				maxWidth: 800
     			}}
-    			/>
-          <div class="product-grid product-grid--flexbox">
+    		/>
+          	<div class="product-grid product-grid--flexbox">
 			<div class="product-grid__wrapper">
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={macbookImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">MacBook </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={vaisselleImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Lot de vaisselle </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Vaisselle à troquer contre chaise.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
 							<img src="" alt="Img" class="product-grid__img" />
 						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+								<p class="product-grid__description">Description.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
 					</div>
@@ -63,15 +83,15 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
+							<img src="" alt="Img" class="product-grid__img" />
 						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+								<p class="product-grid__description">Description.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
 					</div>
@@ -80,15 +100,15 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
+							<img src="" alt="Img" class="product-grid__img" />
 						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+								<p class="product-grid__description">Description.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
 					</div>
@@ -97,89 +117,24 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
+							<img src="" alt="Img" class="product-grid__img" />
 						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src="https://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">Product title</span>
-						<span class="product-grid__price">1.399€</span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>				
-								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
+								<p class="product-grid__description">Description.</p>
+								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>		
-		</div>
+			</div>
+			<div className="footer">
+
+        	</div>
           </div>
       
         );
