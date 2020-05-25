@@ -1,6 +1,8 @@
 import React from "react";
 import Presentation from '../../components/Presentation'
 import APIService from "../../services/APIService"
+import AddPage from './add';
+//var tools = require('./add');
 
 export default class Troc extends React.Component {
     constructor(props) {
@@ -15,8 +17,9 @@ export default class Troc extends React.Component {
 
     render() {
         return (
+            
             <React.Fragment>
-                <div>Bonjour</div>
+                <AddPage/>
             </React.Fragment>
         )
     }
