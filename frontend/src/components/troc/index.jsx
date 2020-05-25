@@ -1,5 +1,5 @@
-import "./styleproduct.scss";
+import "./styleproductlist.scss";
 import "./styleitem.scss";
 
-export { Product } from "./troc";
+export { Product } from "./productlist";
 export { Item } from "./item";

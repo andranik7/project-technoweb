@@ -10,8 +10,9 @@ import {
   Link
 } from "react-router-dom";
 import { Login, Register } from "./components/login/index";
-import { Product } from './components/troc/product';
+import { Product } from './components/troc/productlist';
 import { Item } from './components/troc/item';
+import { Advices } from './components/conseil/advicelist';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
          <Route path="/item">
             <Item />
           </Route>
+          <Route path="/conseil">
+           <Advices /> 
+         </Route>
           <Route path="/">
             <Home />
           </Route>

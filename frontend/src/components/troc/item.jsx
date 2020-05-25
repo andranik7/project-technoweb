@@ -23,7 +23,7 @@ export class Item extends React.Component {
 
         return (
             <div class="container" ref={this.props.containerRef}>
-            <div class="desc">
+            <div class="top-container">
 		          <p>Consultez les annonces :</p>
 	        </div>
 			<SearchBar
@@ -83,7 +83,7 @@ export class Item extends React.Component {
                                 <button class="btn">Echanger</button></div>*/}
                             <div class="buttons">
                                 <ButtonToolbar>
-                                    <Button variant='primary' onClick={()=> this.setState({addModalShow: true})}> Troquer </Button>
+                                    <Button className="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}> Troquer </Button>
                                     <Msg show={this.state.addModalShow} onHide={addModalClose}></Msg>           
                                 </ButtonToolbar></div>
                             </li>

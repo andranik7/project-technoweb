@@ -1,23 +1,29 @@
 import React from "react";
-import './styleproduct.scss';
+import './styleproductlist.scss';
 import SearchBar from 'material-ui-search-bar'
 import macbookImg from "../../assets/macbook.png";
 import vaisselleImg from "../../assets/vaisselle.png";
 import vaisselle2Img from "../../assets/vaisselle2.jpg";
 import vaisselle3Img from "../../assets/vaisselle3.PNG";
-
+import {ContactInfo} from './contact-info'
+import {Button, ButtonToolbar} from 'react-bootstrap';
 
 export class Product extends React.Component {
     constructor(props) {
-      super(props);
+	  super(props);
+
+	  this.state = {addModalShow : false}
+
     }
 
     render() {
 
+		let addModalClose=() => this.setState({addModalShow:false});
+
         return (
           <div class="container" ref={this.props.containerRef}>
-            <div class="desc">
-	          	<h1>Bienvenue sur la page de troc ! </h1>
+            <div class="top-container">
+	          	<h3>Bienvenue sur la page de troc ! </h3>
 		        <p>Consultez les annonces :</p>
 	        </div>
 			<SearchBar
@@ -40,7 +46,9 @@ export class Product extends React.Component {
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
 								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
@@ -55,8 +63,10 @@ export class Product extends React.Component {
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Vaisselle à troquer contre chaise.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+							<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
@@ -72,8 +82,10 @@ export class Product extends React.Component {
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Description.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+							<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
@@ -89,8 +101,10 @@ export class Product extends React.Component {
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Description.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
@@ -106,8 +120,10 @@ export class Product extends React.Component {
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Description.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+							<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>
@@ -123,8 +139,10 @@ export class Product extends React.Component {
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
-								<p class="product-grid__description">Description.</p>
-								<span class="product-grid__btn product-grid__contact"><i class="fa fa-cart-arrow-down"></i> Contacter</span>				
+							<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
 						</div>

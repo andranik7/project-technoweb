@@ -188,29 +188,30 @@ img {
                 display :inline-block;
                 margin-left : 15px;
                 margin-right : 15px;
-
             }
 
             @include bp(max-width, $bp-medium) {
                 width: 33%;
             }
 
-            .btn {
+            .btn-primary {
                 font-family: 'Open Sans', sans-serif;
                 font-size: 17px;
                 display: inline-block;
                 border: 0;
-                background-color: #3f51b5;
+                background-color: #3f51b5 !important;
                 color: #fff;
                 cursor: pointer;
                 border-radius: 4px;
+                text-transform: initial;
+
             
                 &:focus {
                     outline: none;
                   }
           
                   &:hover {
-                      background: lighten(#3f51b5, 10%);
+                      background: lighten(#3f51b5, 10%) !important; 
                   }
             }
 

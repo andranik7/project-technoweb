@@ -8,6 +8,8 @@
     font-size: 24px;
     padding : 40px;
     font-family: "Open Sans", sans-serif;
+    color: #3f51b5;
+    font-weight: 900;
   }
 
   .content {
@@ -23,16 +25,25 @@
     }
 
     .form {
-      margin-top: 2em;
+      margin-top: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
 
+      .remember {
+        width : 100%;
+        padding-left:10%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+      }
+      
       .form-group {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: fit-content;
+        
         label {
           font-size: 20px;
         }
@@ -46,7 +57,7 @@
           background-color: #f3f3f3;
           border: 0;
           border-radius: 4px;
-          margin-bottom: 31px;
+          margin-bottom: 10px;
           transition: all 250ms ease-in-out;
           &:hover {
             background-color: #ffffff;
@@ -58,6 +69,7 @@
             box-shadow: 0px 0px 12px 0.8px #3474dbb2;
           }
         }
+
       }
     }
   }
@@ -86,13 +98,18 @@
     }
   }
   .footer {
-    padding : 20px;
-    margin-top: 3em;
-    .msg {
+    padding : 10px;
+    margin-top: 1em;
+    .btn {
+      font-size: 17px;
+    }
+    .links {
       padding : 20px;
       padding-top: 40px;
-      font-size: 20px;
+      font-size: 15px;
     }    
   }
 
 }
+
+

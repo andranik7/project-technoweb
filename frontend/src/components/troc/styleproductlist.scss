@@ -12,19 +12,24 @@ $product-box-shadow: 0px 0px 0px 1px $light-gray;
 
 body {
 	color: $font-color;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Open Sans", sans-serif !important;
 	
 }
-.desc {
+.top-container {
 	padding-top : 35px ;
 	padding-bottom : 20px;
 	
 	p{font-size : 18px;}
 	}
 
+	h3 {
+		color: #3f51b5;
+		font-weight: bold;
+	}
+
 .product-grid {
-	width: 80%;
-	margin: 3rem auto;
+	width: 95%;
+	margin: 2rem auto;
 	// TODO: apply clearfix
 
 .clearfix::after {
@@ -57,10 +62,10 @@ body {
 	}
 
 	&__product-wrapper {
-		padding: 2rem;
+		padding: 1rem;
 		padding-bottom : 20px;
 		float: left;
-		width: 25%;
+		width: 33.3333%;
 	}
 
 	&__product {
@@ -164,6 +169,7 @@ body {
 	// product description
 	&__description {
 		font-size: 16px;
+		padding : 10px;
 		
 		//margin-top: .875rem;
 		margin-top: 0.4375rem;
@@ -175,45 +181,47 @@ body {
 		display: inline-block;
 		font-size: 16px;
 		color: $font-color;
-		background: $light-gray;
-		padding: 0.5em 0.625em;
-		margin-top: 0.875rem;
-		margin-right: 0.625rem;
 		cursor: pointer;
 		border-radius: 4px;
-
 		i.fa {
 			margin-right: 0.3125rem;
 		}
 	}
 
-	&__contact {
+	.btn-primary {
+		font-family: 'Open Sans', sans-serif;
+		display: inline-block !important;
 		font-size: 16px;
-		padding: 5px 20px;
+		display: inline-block;
 		border: 0;
-		background-color: #3f51b5;
+		background-color: #3f51b5 !important;
 		color: #fff;
-		border-radius: 3px;
-		transition: all 250ms ease-in-out;
 		cursor: pointer;
-	  
-		&:focus {
-		  outline: none;
-		}
+		border-radius: 4px;
+		text-transform: initial;
+		padding-left:10px;
+		padding-right:10px;
 
-		&:hover {
-			background: lighten(#3f51b5, 10%);
-		}
+	
+		&:focus {
+			outline: none;
+		  }
+  
+		  &:hover {
+			  background: lighten(#3f51b5, 10%) !important; 
+		  }
 	}
 
 	&__info {
 		font-size: 16px;
-		padding: 5px 20px;
 		border: 0;
 		color: $font-color;
 		background: $light-gray;
 		border-radius: 3px;
+		margin-top: 0.875rem;
+		margin-right: 0.625rem;
 		transition: all 250ms ease-in-out;
+		padding : 14px 20px;
 		cursor: pointer;
 	  
 		&:focus {
