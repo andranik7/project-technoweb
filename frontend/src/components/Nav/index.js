@@ -15,6 +15,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import logo from '../../static/images/logo.png'
+import {BsArrowRepeat} from 'react-icons/bs'
+import {GoLightBulb, GoCommentDiscussion} from 'react-icons/go'
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -135,20 +137,20 @@ export default function PrimarySearchAppBar() {
         >
             <MenuItem>
                 <IconButton aria-label="Conseil" color="inherit">
-                    <EmojiObjectsOutlinedIcon/>
+                    <GoLightBulb/>
                 </IconButton>
                 <p>Conseils</p>
             </MenuItem>
             <MenuItem>
                 <IconButton aria-label="Troc" color="inherit">
-                    <SyncOutlinedIcon />
+                    <BsArrowRepeat />
                 </IconButton>
                 <p>Troc</p>
             </MenuItem>
 
             <MenuItem>
                 <IconButton aria-label="Troc" color="inherit">
-                    <i className="far fa-comments"></i>
+                    <GoCommentDiscussion/>
                 </IconButton>
                 <p>Forum</p>
             </MenuItem>
@@ -189,20 +191,20 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="Conseils" color="inherit">
-                            <EmojiObjectsOutlinedIcon/>
+                            <GoLightBulb/>
                             <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Conseils
                             </Typography>
 
                         </IconButton>
                         <IconButton aria-label="Troc" color="inherit">
-                            <SyncOutlinedIcon/>
+                            <BsArrowRepeat/>
                             <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Troc
                             </Typography>
                         </IconButton>
                         <IconButton aria-label="Conseils" color="inherit">
-                            <i className="far fa-comments"></i>
+                            <GoCommentDiscussion/>
                             <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Forum
                             </Typography>

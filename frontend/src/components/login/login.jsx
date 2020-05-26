@@ -4,7 +4,8 @@ import Link from '@material-ui/core/Link';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Grid from '@material-ui/core/Grid';
-
+import './connexion.scss';
+import {Button} from 'react-bootstrap'
 
 export class Login extends React.Component {
     constructor(props) {
@@ -15,12 +16,11 @@ export class Login extends React.Component {
     render() {
 
         return (
-          //
         <div className="container">
-          <Grid container spacing={2} direction="rows" alignItems="center" justify="center" style={{ minHeight: '100px' }}> 
+          <Grid container spacing={10} direction="rows" alignItems="center" justify="center" style={{ minHeight: '100px' }}> 
             <Grid item md={6} >
               <div className="image">
-                <img src={loginImg} />
+                <img src={loginImg}/>
               </div>
               </Grid>
             <Grid item md={6}>
@@ -40,10 +40,9 @@ export class Login extends React.Component {
                   <FormControlLabel
                     control={<Checkbox value="remember" color="primary" />}
                     label="Se souvenir de moi"
-                    text-align="left" /></div>
-                <div className="submit">
-                  <input type="submit" className="btn" value="S'inscrire"/>
+                    text-align="left" />
                 </div>
+                <Button className="btn-purple" variant="primary" type="submit">S'inscrire</Button>
               </form>
             </div>            
             <div className="links">

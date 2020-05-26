@@ -18,12 +18,18 @@ body {
 	padding-bottom : 20px;
 	
 	p{font-size : 18px;}
-	}
-
 	h3 {
 		color: #3f51b5;
 		font-weight: bold;
 	}
+	img {
+		width: 400px; }
+}
+
+.product-grid {
+	margin: 30 0 20 0px !important;
+	width:100% !important;
+}
 
 .product-grid {
 	width: 95%;
@@ -79,7 +85,6 @@ body {
 		&:hover {
 			box-shadow: $product-box-shadow;
 			z-index: 50;
-
 			.product-grid__extend {
 				display: block;
 				width: 100%;
@@ -108,7 +113,7 @@ body {
 		margin-top: 0.875rem;
 		display: block;
 		font-size: 20px;
-		color: hsl(173, 43%, 41%);
+		color: #3f51b5;
 		font-weight: bold;
 		height: 3em;
 		overflow: hidden;
@@ -150,18 +155,29 @@ body {
 		position: absolute;
 		padding: 1rem 0 2rem 0;
 		margin: 0.4375rem 0;
+		margin-top:-1px;
 		box-shadow: $product-box-shadow;
 		background: #fff;
 		border-radius: 0 0 4px 4px;
+		background-color: #3f51b570;
+		
 
 		&:before {
 			content: "";
 			height: 0.875rem;
 			width: 100%;
 			position: absolute;
-			top: -0.4375rem;
+			top: -0.2rem;
 			left: 0;
 			background: #fff;
+		}
+
+		&__btn {
+			display: inline-block;
+		}
+
+		.btn {
+			margin: 7px ;
 		}
 	}
 
@@ -175,51 +191,7 @@ body {
 		margin-bottom: 0;
 	}
 
-	// buttons
-	&__btn {
-		display: inline-block;
-		transition: all 250ms ease-in-out;
-		font-size: 16px;
-		cursor: pointer;
-		border-radius: 4px;
-		i.fa {
-			margin-right: 0.3125rem;
-		}
-	}
-	.btn-primary {
-		font-family: 'Open Sans', sans-serif;
-		display: inline-block !important;
-		padding : 14px 20px !important;
-		border: 0;
-		background-color: #3f51b5 !important;
-		color: #fff;
-		cursor: pointer;
-		text-transform: capitalize;
-	
-		&:focus {
-			outline: none;
-		  }
-  
-		  &:hover {
-			  background: lighten(#3f51b5, 10%) !important; 
-		  }
-	}
 
-	&__info {
-		border: 0;
-		color: $font-color;
-		background: $light-gray;
-		padding : 14px 20px;
-		cursor: pointer;
-	  
-		&:focus {
-		  outline: none;
-		}
-
-		&:hover {
-			background: lighten($light-gray, 10%);
-		}
-	}
 }
 .footer {
 	height : 200px;

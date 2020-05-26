@@ -76,11 +76,8 @@ img {
     height: auto;
 }
 
-
-
     .section {
-        padding: 30px 0;
-        margin-top :100px;
+        margin-top :30px;
         
         .section-title {
             text-align: center;
@@ -140,6 +137,9 @@ img {
         margin-left: 2%;
         align-items: stretch;
         overflow: auto;
+        padding:20px;
+        background-color: lighten(#3f51b550, 15% );
+        border-radius: 5px;
         
         @include bp(max-width, $bp-medium) {
             width: 100%;
@@ -154,6 +154,7 @@ img {
         .product-name {
             font-size: $f-size-xxl;
             font-weight: bold;
+            color: #3f51b5;
         }
         
         .product-owner {
@@ -240,10 +241,16 @@ img {
     }
     
     .product-image {
-        img {
-            display: block;
-            width: 100%;
-        }
+        max-width: 100px;
+        height: auto;
+        max-height: 100%;
+        vertical-align: middle;
+        border-style: none;
+
+            img {
+              width:100%;
+              padding : 40px;
+            }
     }
     
     .product-name {
@@ -253,7 +260,6 @@ img {
 }
 
 a.product {
-    color: #000;
     text-decoration: none;
 }
 
@@ -283,3 +289,16 @@ ul {
     padding-inline-start: 20px;
 }
 
+
+.footer {
+    padding:50px;
+    width:100%;
+    margin-bottom:40px;
+
+    i {
+        padding:50px;
+    }
+    img {
+        width : 140px;
+    }
+}

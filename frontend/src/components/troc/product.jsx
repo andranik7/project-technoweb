@@ -4,9 +4,11 @@ import SearchBar from 'material-ui-search-bar';
 import vaisselleImg from "../../assets/vaisselle.png";
 import vaisselle2Img from "../../assets/vaisselle2.jpg";
 import vaisselle3Img from "../../assets/vaisselle3.PNG";
-
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from "mdbreact";
+import {BsArrowRepeat} from 'react-icons/bs'
 import {Button, ButtonToolbar} from 'react-bootstrap';
-import {Msg} from './msg'
+import {Msg} from './troc-modal'
+import womanSearchImg from "../../assets/woman_search.svg"
 
 
 export class Product extends React.Component {
@@ -24,25 +26,37 @@ export class Product extends React.Component {
         return (
             <div class="container" ref={this.props.containerRef}>
             <div class="top-container">
-		          <p>Consultez les annonces :</p>
 	        </div>
-			<SearchBar
-    			onChange={() => console.log('onChange')}
-				onRequestSearch={() => console.log('onRequestSearch')}
-				style={{
-				margin: '0 auto',
-				maxWidth: 800
-    			}}
-    		/>
-
           	<div class="section section-gray">
                 <div class="section-content">
                     <div class="product-details">
                         <ul class="product-images">
-                            <li class="preview"><img src={vaisselleImg} alt=""/></li>
-                            <li><img src={vaisselleImg} alt="Img"/></li>
-                            <li><img src={vaisselle2Img} alt="Img"/></li>
-                            <li><img src={vaisselle3Img} alt="Img"/></li>
+                            <MDBContainer>
+                                <MDBCarousel
+                                activeItem={1}
+                                length={3}
+                                showControls={true}
+                                showIndicators={true}
+                                className="z-depth-1">
+                                    <MDBCarouselInner>
+                                        <MDBCarouselItem itemId="1">
+                                            <MDBView>
+                                                <img src={vaisselleImg} alt="Img"/>
+                                            </MDBView>
+                                        </MDBCarouselItem>
+                                        <MDBCarouselItem itemId="2">
+                                            <MDBView>
+                                                <img src={vaisselle2Img} alt="Img"/>
+                                            </MDBView>
+                                        </MDBCarouselItem>
+                                        <MDBCarouselItem itemId="3">
+                                            <MDBView>
+                                                <img src={vaisselle3Img} alt="Img"/>
+                                            </MDBView>
+                                        </MDBCarouselItem>
+                                    </MDBCarouselInner>
+                                </MDBCarousel>
+                            </MDBContainer>
                         </ul>
                         <ul class="product-info">
                             <li class="product-name">Lot de vaisselle</li>
@@ -82,10 +96,9 @@ export class Product extends React.Component {
                             {/*<div class="buttons">
                                 <button class="btn">Echanger</button></div>*/}
                             <div class="buttons">
-                                <ButtonToolbar>
-                                    <Button className="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}> Troquer </Button>
+                                    <Button className="btn-purple" variant='primary' onClick={()=> this.setState({addModalShow: true})}><BsArrowRepeat/> Troquer </Button>
                                     <Msg show={this.state.addModalShow} onHide={addModalClose}></Msg>           
-                                </ButtonToolbar></div>
+                            </div>
                             </li>
                         </ul>
                     </div>
@@ -93,7 +106,17 @@ export class Product extends React.Component {
             </div>
 
             <div className="footer">
-		
+            <img  src={womanSearchImg} />
+            <i>Vous ne trouvez pas votre bonheur ? Consultez les autres annonces :</i>
+			<SearchBar
+    			onChange={() => console.log('onChange')}
+				onRequestSearch={() => console.log('onRequestSearch')}
+				style={{
+				margin: '0 auto',
+				maxWidth: 800
+    			}}
+    		/>
+            <div ></div>
             </div>
 			</div>      
         );
