@@ -1,5 +1,5 @@
 import React from "react";
-import './styleitem.scss';
+import './product.scss';
 import SearchBar from 'material-ui-search-bar';
 import vaisselleImg from "../../assets/vaisselle.png";
 import vaisselle2Img from "../../assets/vaisselle2.jpg";
@@ -9,7 +9,7 @@ import {Button, ButtonToolbar} from 'react-bootstrap';
 import {Msg} from './msg'
 
 
-export class Item extends React.Component {
+export class Product extends React.Component {
     constructor(props) {
       super(props);
 

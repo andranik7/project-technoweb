@@ -9,13 +9,13 @@ import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import ForumIcon from '@material-ui/icons/Forum';
-import AutorenewIcon from '@material-ui/icons/Autorenew';
-import CreateIcon from '@material-ui/icons/Create';
-
+import SyncOutlinedIcon from '@material-ui/icons/SyncOutlined';
+import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import logo from '../../static/images/logo.png'
+
 const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'block',
         },
+        fontWeight:'light',
+        fontSize : '20px',
     },
     search: {
         position: 'relative',
@@ -133,20 +135,20 @@ export default function PrimarySearchAppBar() {
         >
             <MenuItem>
                 <IconButton aria-label="Conseil" color="inherit">
-                    <CreateIcon />
+                    <EmojiObjectsOutlinedIcon/>
                 </IconButton>
                 <p>Conseils</p>
             </MenuItem>
             <MenuItem>
                 <IconButton aria-label="Troc" color="inherit">
-                    <AutorenewIcon />
+                    <SyncOutlinedIcon />
                 </IconButton>
                 <p>Troc</p>
             </MenuItem>
 
             <MenuItem>
                 <IconButton aria-label="Troc" color="inherit">
-                    <ForumIcon />
+                    <i className="far fa-comments"></i>
                 </IconButton>
                 <p>Forum</p>
             </MenuItem>
@@ -187,21 +189,21 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton aria-label="Conseils" color="inherit">
-                            <CreateIcon />
-                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
+                            <EmojiObjectsOutlinedIcon/>
+                            <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Conseils
                             </Typography>
 
                         </IconButton>
                         <IconButton aria-label="Troc" color="inherit">
-                            <AutorenewIcon />
-                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
+                            <SyncOutlinedIcon/>
+                            <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Troc
                             </Typography>
                         </IconButton>
                         <IconButton aria-label="Conseils" color="inherit">
-                            <ForumIcon />
-                            <Typography className={classes.title} variant="h6" noWrap style={{paddingLeft: "15px"}}>
+                            <i className="far fa-comments"></i>
+                            <Typography className={classes.title} noWrap style={{paddingLeft: "15px"}}>
                                 Forum
                             </Typography>
 

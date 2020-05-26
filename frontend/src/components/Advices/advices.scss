@@ -32,7 +32,6 @@ body {
 		border-radius: 4px;
 		transition: all 250ms ease-in-out;
 		cursor: pointer;
-		//text-transform: capitalize;
 
 		&:focus {
 		  outline: none;
@@ -88,4 +87,20 @@ textarea {
 
 .carousel-control-next-icon {
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5e/Font_Awesome_5_solid_chevron-circle-right.svg") !important;
+}
+
+.submit {
+	background-color: #3f51b5 !important;
+	color: #fff;
+	border-radius: 4px;
+	transition: all 250ms ease-in-out;
+	cursor: pointer;
+
+	&:focus {
+	  outline: none;
+	}
+
+	&:hover {
+		background: lighten(#3f51b5, 10%) !important;
+	}
 }

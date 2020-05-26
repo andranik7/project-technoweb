@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 import Table from 'react-bootstrap/Table';
-import './stylemsg.scss';
+import './modalwindow.scss';
 
 
 export class ContactInfo extends Component{
@@ -24,10 +27,11 @@ export class ContactInfo extends Component{
                 Fiche de contact du troqueur
               </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <div class="container">
+            <Modal.Body >
               <Table responsive>
                 <thead>
-                    <tr><h5>Alex Martin</h5>
+                    <tr><h5 >Alex Martin</h5>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,8 +54,9 @@ export class ContactInfo extends Component{
                 </tbody>
             </Table>
             </Modal.Body>
+            </div>
             <Modal.Footer>
-              <Button variant="danger" onClick={this.props.onHide}>Fermer</Button>
+              <Button variant="danger" onClick={this.props.onHide}><i class="fas fa-times"></i>  Fermer</Button>
             </Modal.Footer>
           </Modal>
         );

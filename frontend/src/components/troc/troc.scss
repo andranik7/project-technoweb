@@ -1,6 +1,4 @@
-
 // Start here
-
 $font-color: #777;
 $light-gray: #D3D3D3;
 // product
@@ -110,7 +108,8 @@ body {
 		margin-top: 0.875rem;
 		display: block;
 		font-size: 20px;
-		color: black;
+		color: hsl(173, 43%, 41%);
+		font-weight: bold;
 		height: 3em;
 		overflow: hidden;
 		position: relative;
@@ -179,29 +178,23 @@ body {
 	// buttons
 	&__btn {
 		display: inline-block;
+		transition: all 250ms ease-in-out;
 		font-size: 16px;
-		color: $font-color;
 		cursor: pointer;
 		border-radius: 4px;
 		i.fa {
 			margin-right: 0.3125rem;
 		}
 	}
-
 	.btn-primary {
 		font-family: 'Open Sans', sans-serif;
 		display: inline-block !important;
-		font-size: 16px;
-		display: inline-block;
+		padding : 14px 20px !important;
 		border: 0;
 		background-color: #3f51b5 !important;
 		color: #fff;
 		cursor: pointer;
-		border-radius: 4px;
-		text-transform: initial;
-		padding-left:10px;
-		padding-right:10px;
-
+		text-transform: capitalize;
 	
 		&:focus {
 			outline: none;
@@ -213,14 +206,9 @@ body {
 	}
 
 	&__info {
-		font-size: 16px;
 		border: 0;
 		color: $font-color;
 		background: $light-gray;
-		border-radius: 3px;
-		margin-top: 0.875rem;
-		margin-right: 0.625rem;
-		transition: all 250ms ease-in-out;
 		padding : 14px 20px;
 		cursor: pointer;
 	  

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Modal, Button, Form} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
-import "./styleadviceslist.scss";
+import "./advices.scss";
 
 export class AddAdvice extends Component{
     constructor(props){
@@ -26,7 +26,7 @@ export class AddAdvice extends Component{
             <Modal.Body>
             <form id="addadvice" className="form">
               <textarea rows="4" cols="80" name="advice" form="addadvice"/>
-            <div className=""><input className="btn" type="submit" value="Envoyer" /></div>
+            <div className=""><input className="submit" type="submit" value="Envoyer" /></div>
             </form>
             </Modal.Body>
             <Modal.Footer>

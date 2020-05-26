@@ -9,10 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Login, Register } from "./components/login/index";
-import { Product } from './components/troc/productlist';
-import { Item } from './components/troc/item';
-import { Advices } from './components/conseil/advicelist';
+import { Login, Register } from "./components/Login/index";
+import { ProductList } from './components/Troc/main';
+import { Product } from './components/Troc/product';
+import { AdviceList } from './components/Advices/main';
 
 function App() {
   return (
@@ -27,13 +27,13 @@ function App() {
            <Register /> 
          </Route>
          <Route path="/troc">
-           <Product /> 
+           <ProductList /> 
          </Route>
-         <Route path="/item">
-            <Item />
+         <Route path="/product">
+            <Product />
           </Route>
-          <Route path="/conseil">
-           <Advices /> 
+          <Route path="/conseils">
+           <AdviceList /> 
          </Route>
           <Route path="/">
             <Home />

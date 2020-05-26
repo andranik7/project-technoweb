@@ -1,5 +1,5 @@
 import React from "react";
-import "./styleadviceslist.scss";
+import "./advices.scss";
 import SearchBar from 'material-ui-search-bar';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,7 +7,7 @@ import CarouselPage from './carousel';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import {AddAdvice} from './addadvice'
 
-export class Advices extends React.Component {
+export class AdviceList extends React.Component {
     constructor(props) {
       super(props);
 

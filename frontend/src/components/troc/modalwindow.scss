@@ -1,5 +1,16 @@
-.form {
-    
+.modal-body {
+  padding : 30px !important;
+}
+
+
+.table td, .table th, .table thead{   
+  color:#808080;
+}
+
+td {
+  padding-left:0px !important;
+}
+form {
     margin-top: 2em;
     display:block;
 
@@ -10,7 +21,8 @@
 
         label {
             display: flex;
-            flex-direction: column;        
+            flex-direction: column;     
+            color:#808080;
         }
 
         .cphone {
@@ -46,9 +58,8 @@
     }
   }
 
-  .btn {
+  .submit {
     font-size: 16px;
-    padding: 5px 20px;
     border: 0;
     background-color: #3f51b5 !important; 
     color: #fff !important ;
@@ -63,4 +74,11 @@
     &:hover {
         background: lighten(#3f51b5, 10%) !important;
     }
+}
+
+.btn {
+  text-transform: capitalize;
+  &:hover {
+    background: lighten(red, 20%) !important;
+}
 }

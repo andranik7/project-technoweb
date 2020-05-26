@@ -1,5 +1,5 @@
 import React from "react";
-import './styleproductlist.scss';
+import './troc.scss';
 import SearchBar from 'material-ui-search-bar'
 import macbookImg from "../../assets/macbook.png";
 import vaisselleImg from "../../assets/vaisselle.png";
@@ -7,8 +7,9 @@ import vaisselle2Img from "../../assets/vaisselle2.jpg";
 import vaisselle3Img from "../../assets/vaisselle3.PNG";
 import {ContactInfo} from './contact-info'
 import {Button, ButtonToolbar} from 'react-bootstrap';
+import defaultImg from "../../assets/default-product-img.png";
 
-export class Product extends React.Component {
+export class ProductList extends React.Component {
     constructor(props) {
 	  super(props);
 
@@ -39,7 +40,7 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src={macbookImg} alt="Img" class="product-grid__img" />
+							<img src={macbookImg} alt="Img" class="product-grid__img" />				
 						</div>
 						<span class="product-grid__title">MacBook </span>
 						<span class="product-grid__price"></span>
@@ -47,7 +48,7 @@ export class Product extends React.Component {
 							<div class="product-grid__extend">
 								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
 								<span class="product-grid__btn product-grid__contact">				
-                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <Button class="btn" variant='primary'onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
                                     <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
 								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
 							</div>
@@ -76,7 +77,7 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="" alt="Img" class="product-grid__img" />
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
 						</div>
 						<span class="product-grid__title">Nom du produit </span>
 						<span class="product-grid__price"></span>
@@ -95,7 +96,7 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="" alt="Img" class="product-grid__img" />
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
 						</div>
 						<span class="product-grid__title">Nom du produit </span>
 						<span class="product-grid__price"></span>
@@ -114,7 +115,7 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="" alt="Img" class="product-grid__img" />
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
 						</div>
 						<span class="product-grid__title">Nom du produit </span>
 						<span class="product-grid__price"></span>
@@ -133,13 +134,108 @@ export class Product extends React.Component {
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
 						<div class="product-grid__img-wrapper">			
-							<img src="" alt="Img" class="product-grid__img" />
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
 						</div>
 						<span class="product-grid__title">Nom du produit </span>
 						<span class="product-grid__price"></span>
 						<div class="product-grid__extend-wrapper">
 							<div class="product-grid__extend">
 							<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
+								<span class="product-grid__btn product-grid__contact">				
+                                    <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
+                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
+								<span class="product-grid__btn product-grid__info"><i class="fa fa-eye"></i> Plus d'infos </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">			
+							<img src={defaultImg} alt="Img" class="product-grid__img" />
+						</div>
+						<span class="product-grid__title">Nom du produit </span>
+						<span class="product-grid__price"></span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
 								<span class="product-grid__btn product-grid__contact">				
                                     <Button  class="btn" variant='primary' onClick={()=> this.setState({addModalShow: true})}><i class="far fa-user"></i> Contacter </Button>
                                     <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>           
