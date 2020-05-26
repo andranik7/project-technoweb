@@ -9,8 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Login, Register } from "./components/login/index";
-
+import { Login, Register } from "./components/Login/index";
+import { ProductList } from './components/Troc/main';
+import { Product } from './components/Troc/product';
+import { AdviceList } from './components/Advices/main';
 
 function App() {
   return (
@@ -23,6 +25,15 @@ function App() {
          </Route>
          <Route path="/register">
            <Register /> 
+         </Route>
+         <Route path="/troc">
+           <ProductList /> 
+         </Route>
+         <Route path="/product">
+            <Product />
+          </Route>
+          <Route path="/conseils">
+           <AdviceList /> 
          </Route>
           <Route path="/">
             <Home />
