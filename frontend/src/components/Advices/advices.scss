@@ -1,114 +1,54 @@
-body {
-	color: grey;
-	font-family: "Open Sans", sans-serif;
-	
-}
 .top-container {
-	padding-top : 35px ;
-	padding-bottom : 20px;
-	
-	p{font-size : 18px;}
+	img {
+		width : 320px;
 	}
 
-	h3 {
-		color: #3f51b5;
-		font-weight: bold;
-	}
-
-.main-content{
-	margin-top : 60px;
-
-	
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	.btn {
-		margin-top : 20px;
-		font-size: 16px;
-		border: 0;
-		background-color: #3f51b5 !important;
-		color: #fff;
-		border-radius: 4px;
-		transition: all 250ms ease-in-out;
-		cursor: pointer;
-
-		&:focus {
-		  outline: none;
-		}
-
-		&:hover {
-			background: lighten(#3f51b5, 10%) !important;
-		}
-
-		&:active {
-			background-color: lawngreen;
-		}
-
+	.add {
+		margin : 50px;
 	}
 }
 
-
-.footer {
-	height : 200px;
+.red {
+	color: rgb(255, 0, 76);
 }
-
-textarea {
-	margin-top: 6px;
-	height: 200px;
-	width:100%;
-	padding: 0px 10px;
-	font-size: 16px;
-	font-family: "Open Sans", sans-serif;
-	background-color: #f3f3f3;
-	border: 0;
-	border-radius: 4px;
-	margin-bottom: 10px;
-	transition: all 250ms ease-in-out;
-	&:hover {
-	  background-color: #ffffff;
-	  box-shadow: 0px 0px 14px 0.3px #0e81ce96;
-	}
-
-	&:focus {
-	  outline: none;
-	  box-shadow: 0px 0px 12px 0.8px #3474dbb2;
-	}
-  }
-
-.card {
-	  margin:20px;
-	  margin-bottom:20px !important;
-	  outline : none;
-	  border-radius: 4px !important ;
-
-  }
-
-  .rounded-bottom {
-	border--bottom-right-radius: 15px !important ;
-	border--bottom-left-radius: 15px !important ;
-  }
 
 .carousel-control-prev-icon {
-   background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/15/Font_Awesome_5_solid_chevron-circle-left.svg") !important;
+    background-image: url();
 }
 
-.carousel-control-next-icon {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5e/Font_Awesome_5_solid_chevron-circle-right.svg") !important;
-}
+.card {
+	background-color:rgba(218, 216, 216, 0.493) !important;
+	//background-color: rgba(88, 198, 183, 0.445) !important;
+	margin : 14px !important;
+	border-radius: 4px !important;
+	border:none !important;
 
-.submit {
-	background-color: #3f51b5 !important;
-	color: #fff;
-	border-radius: 4px;
-	transition: all 250ms ease-in-out;
-	cursor: pointer;
-
-	&:focus {
-	  outline: none;
+	.btn-purple {
+		&:hover {
+		background-color:  white !important;	
+		border-color: white !important;
+		//color: #3f51b5 !important;}
+		color: rgb(255, 0, 76) !important;}
+	
 	}
-
 	&:hover {
-		background: lighten(#3f51b5, 10%) !important;
+		background-color: lighten(#3f51b570, 15% )!important;	
+		border:none !important;
+
+		.rounded-bottom {
+			background-color: lighten(#303e8d8f, 15% )!important;	
+			border:none !important;
+		}
+	  }
+
+	.rounded-bottom {
+		background-color:rgba(182, 182, 182, 0.493) !important;
+	}
+
+	.card-text {
+		font-size : 18px !important;
+		min-height:60px !important;
 	}
 }
+
+

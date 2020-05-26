@@ -1,84 +1,63 @@
+.modal-header {
+  background-color: hsla(173, 55%, 43%, 0.774) ;
+  color: whitesmoke;
+  padding-left:30px !important;
+}
+
 .modal-body {
   padding : 30px !important;
-}
 
-
-.table td, .table th, .table thead{   
-  color:#808080;
-}
-
-td {
-  padding-left:0px !important;
-}
-form {
-    margin-top: 2em;
-    display:block;
-
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-
-        label {
-            display: flex;
-            flex-direction: column;     
-            color:#808080;
-        }
-
-        .cphone {
-        margin-top: 6px;
-        min-width: 18em;
-        height: 37px;
-        padding: 0px 10px;
-        transition: all 250ms ease-in-out;
-        }
-
-        textarea, .cphone {
-          margin-top: 6px;
-          width:100%;
-          padding: 0px 10px;
-          font-size: 16px;
-          font-family: "Open Sans", sans-serif;
-          background-color: #f3f3f3;
-          border: 0;
-          border-radius: 4px;
-          margin-bottom: 10px;
-          transition: all 250ms ease-in-out;
-          &:hover {
-            background-color: #ffffff;
-            box-shadow: 0px 0px 14px 0.3px #0e81ce96;
-          }
-        
-          &:focus {
-            outline: none;
-            box-shadow: 0px 0px 12px 0.8px #3474dbb2;
-          }
-        }
-
-    }
+  h5{
+    font-weight: bold;
+    color: #3f51b5;
+    padding-bottom:30px;
+    padding-left:10px;
   }
 
-  .submit {
-    font-size: 16px;
-    border: 0;
-    background-color: #3f51b5 !important; 
-    color: #fff !important ;
-    border-radius: 3px;
-    transition: all 250ms ease-in-out;
-    cursor: pointer;
-  
-    &:focus {
-      outline: none;
-    }
+  form {
+    margin:10px;
+    margin-top:10px;
 
-    &:hover {
-        background: lighten(#3f51b5, 10%) !important;
-    }
-}
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
 
-.btn {
-  text-transform: capitalize;
-  &:hover {
-    background: lighten(red, 20%) !important;
-}
+      label {
+          display: flex;
+          flex-direction: column;     
+      }
+      .cphone {
+      margin-top: 6px;
+      min-width: 18em;
+      height: 37px;
+      padding: 0px 10px;
+      transition: all 250ms ease-in-out;
+      }
+
+      textarea, .cphone {
+        margin-top: 6px;
+        width:100%;
+        padding: 0px 10px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
+        background-color: #f3f3f3;
+        border: 0;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        transition: all 250ms ease-in-out;
+
+        &:hover {
+          background-color: #ffffff;
+          box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+        }
+      
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+        }
+      }
+
+  }
+  }
 }

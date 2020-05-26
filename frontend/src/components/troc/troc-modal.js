@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
-
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
-import 'mdbreact/dist/css/mdb.css';
 import Table from 'react-bootstrap/Table';
-import './modalwindow.scss';
+import {Modal, Button, Row, Col, Form} from 'react-bootstrap';
+import { IoMdContact } from 'react-icons/io';
+import {FiMessageCircle} from 'react-icons/fi'
+import {IoIosSend} from 'react-icons/io'
+import {MdClose} from 'react-icons/md'
 
-
-export class ContactInfo extends Component{
+export class Msg extends Component{
     constructor(props){
         super(props);
 
@@ -27,13 +25,9 @@ export class ContactInfo extends Component{
                 Fiche de contact du troqueur
               </Modal.Title>
             </Modal.Header>
-            <div class="container">
-            <Modal.Body >
+            <Modal.Body>
+              <h5><div class="username"><IoMdContact/> Alex Martin</div></h5>
               <Table responsive>
-                <thead>
-                    <tr><h5 >Alex Martin</h5>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
                     <td><label htmlFor="firstname">Prénom</label></td>
@@ -53,10 +47,18 @@ export class ContactInfo extends Component{
                     </tr>
                 </tbody>
             </Table>
+            <h5><FiMessageCircle/>   Laisser un message à Alex</h5>
+            <form id="msg" className="form">
+              <div className="form-group"><label htmlFor="cphone">Ton numéro de téléphone : </label>
+              <input className="cphone" type="text" name="cphone" />
+              </div>
+              <div className="form-group"><label htmlFor="comment">Message : </label>
+              <textarea rows="4" cols="50" name="comment" form="msg"/> </div>
+              <Button className="btn-purple" variant='primary' type="submit" ><IoIosSend/> Envoyer </Button>
+            </form>
             </Modal.Body>
-            </div>
             <Modal.Footer>
-              <Button variant="danger" onClick={this.props.onHide}><i class="fas fa-times"></i>  Fermer</Button>
+              <Button variant="danger" onClick={this.props.onHide}> <MdClose/>  Fermer</Button>
             </Modal.Footer>
           </Modal>
         );

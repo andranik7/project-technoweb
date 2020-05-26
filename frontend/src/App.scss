@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+
+}
+
+//button references 
+
+.btn-purple {
+  background-color: #3f51b5 !important;
+  border-color:#3f51b5 !important;
+  
+  &:hover {
+    background-color: lighten(#3f51b5, 15% )!important;
+    border-color: lighten(#3f51b5, 15% )!important;
+
+  }
+}
+
+.btn-white {
+  background-color: white !important;
+  border-color: white !important;
+
+  &:hover {
+    background-color: lighten(#3f51b5, 15% )!important;
+    border-color: lighten(#3f51b5, 15% )!important;
+
+  }
+}
+
+
+// color classes references 
+
+.blu {
+  color :#3f51b5;
+  font-weight:900;
+  }
+
+.sky {
+  color :#5fc9bc; 
+  font-weight:900;
+
+}
