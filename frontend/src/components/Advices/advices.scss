@@ -79,6 +79,14 @@ textarea {
 .card {
 	  margin:20px;
 	  margin-bottom:20px !important;
+	  outline : none;
+	  border-radius: 4px !important ;
+
+  }
+
+  .rounded-bottom {
+	border--bottom-right-radius: 15px !important ;
+	border--bottom-left-radius: 15px !important ;
   }
 
 .carousel-control-prev-icon {

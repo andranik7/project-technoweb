@@ -24,10 +24,12 @@ const CarouselPage = () => {
                             <MDBBtn class="btn" name="btn" color="primary" onclick="setColor('btn','#101010')"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
@@ -36,9 +38,6 @@ const CarouselPage = () => {
                                     <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -49,21 +48,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Julie Latour
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 02/03/2020
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 24
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -74,21 +72,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 06/01/2020
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 68
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -101,21 +98,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 23/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 3
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -126,21 +122,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 05/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 32
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -151,21 +146,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 05/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
                                     <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -180,21 +174,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 23/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 3
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -205,21 +198,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 05/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
-                                    <MDBIcon icon="thumbs-up" /> 32
+                                    <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
@@ -230,21 +222,20 @@ const CarouselPage = () => {
                             <MDBBtn  class="btn" color="primary"> <MDBIcon icon="thumbs-up" /> Aimer</MDBBtn>
                         </MDBCardBody>
                         <div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
-                            <ul className='list-unstyled list-inline font-small'>
+                            <ul className='list-unstyled list-inline font-medium'>
                                 <li className='list-inline-item white-text'>
                                     <MDBIcon icon="user" className='mr-1' /> Alex Martin
                                 </li>
+                            </ul>
+                            <ul className ='list-unstyled list-inline font-small'>
                                 <li className='list-inline-item white-text'>
-                                    <MDBIcon icon="clock" /> 05/12/2019
+                                    <MDBIcon icon="clock" /> 05/10/2015
                                 </li>
                                 <li className='list-inline-item '>
                                 <a href='#!' className='white-text'>
                                     <MDBIcon icon="thumbs-up" /> 12
                                 </a>
                                 </li>
-                            </ul>
-                            <ul>
-                                <p color="white"> . </p>
                             </ul>
                         </div>
                     </MDBCard>
