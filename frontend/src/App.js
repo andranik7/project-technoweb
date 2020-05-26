@@ -9,7 +9,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Login, Register } from "./components/Login/index";
+import Login from "./components/Login/login.jsx"
+import Register from "./components/Login/register.jsx"
 import { ProductList } from './components/Troc/main';
 import { Product } from './components/Troc/product';
 import { AdviceList } from './components/Advices/main';
