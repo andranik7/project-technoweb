@@ -32,8 +32,8 @@ export class AdviceList extends React.Component {
               		</div>
             	</Grid>
             	<Grid item md={6} >	          	
-                    <h3>Bienvenu sur la page de conseils ! </h3>
-		            <p>Consultez les conseils <text className="sky">;-)</text></p>
+                    <h3>Bienvenue sur la page de conseil ! </h3>
+		            <p>Consulte les conseils <text className="sky">;-)</text></p>
                     <div class="add">
                             et ... <Button className="btn-purple" variant='primary' onClick={()=> this.setState({addModalShow: true})}> <i class="fas fa-plus"> </i> Ajouter un conseil </Button>
                             <AddAdvice show={this.state.addModalShow} onHide={addModalClose}></AddAdvice>           
