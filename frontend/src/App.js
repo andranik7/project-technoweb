@@ -14,6 +14,7 @@ import Register from "./components/Login/register.jsx"
 import { ProductList } from './components/Troc/main';
 import { Product } from './components/Troc/product';
 import { AdviceList } from './components/Advices/main';
+import { Profile } from './components/Profile/profile';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           </Route>
           <Route path="/conseils">
            <AdviceList /> 
+         </Route>
+         <Route path="/profile">
+           <Profile /> 
          </Route>
           <Route path="/">
             <Home />

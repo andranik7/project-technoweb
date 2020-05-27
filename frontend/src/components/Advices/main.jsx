@@ -24,7 +24,7 @@ export class AdviceList extends React.Component {
 
         return (
             <div class="container" ref={this.props.containerRef}>
-                <div class="top-container">
+                <div class="header">
                 <Grid container spacing={10} direction="rows" alignItems="center" justify="center" style={{ minHeight: '100px' }}> 
             	<Grid item md={6} >
               		<div className="image">
