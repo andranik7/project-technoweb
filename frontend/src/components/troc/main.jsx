@@ -36,7 +36,7 @@ export class ProductList extends React.Component {
             	</Grid>
             	<Grid item md={6} >	          	
 					<h3>Bienvenue sur la page de troc ! </h3>
-		        	<p>Consultez les annonces : </p>
+		        	<p>Consulte les annonces : </p>
 				</Grid>
 			</Grid>
 	        </div>

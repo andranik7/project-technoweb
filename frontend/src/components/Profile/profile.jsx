@@ -25,7 +25,7 @@ export class Profile extends React.Component {
         return (
         <div className="container">
             <div className = "header">
-                <h3>Profile </h3>
+                <h3>Profil </h3>
 		        <p>Bienvenue sur ton profil ! <text className="sky">;-)</text></p>
             </div>
             <div className="top-container">
