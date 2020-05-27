@@ -1,0 +1,66 @@
+
+
+.top-container {
+
+    .userinfo {
+        padding : 20px;
+        background-color: lighten(#3f51b570, 15% );	
+        border-radius: 7px;
+
+        .table {
+            text-align :left ;
+            h5 {
+                padding:12px;
+            }
+        }
+    }
+}
+.base-container {
+
+    min-height: 500px;
+
+    .container {
+
+        padding:0px;
+
+        .nav-tabs {
+            background-color: #3f51b5 ;
+            border-top-right-radius: 6px;
+            border-top-left-radius: 6px;
+
+            .nav-item {
+
+                border:none; 
+                color : white;
+                .active {
+                    color : #3f51b5;
+                    border-color:white;
+                }
+
+                &:hover {
+                    background-color: lighten(#3f51b5, 15% );
+                    border-color: lighten(#3f51b5, 15% ) ;
+                    border-top-right-radius: 6px;
+                    border-top-left-radius: 6px;
+
+                    .active {
+                        border-color: white !important;
+                        border-top-right-radius: 6px;
+                        border-top-left-radius: 6px;
+                    }
+                }
+            }
+        }
+
+        .nav-link{
+
+            color : white;
+
+            &:hover {
+                border-color: lighten(#3f51b5, 15% ) ;
+                border-top-right-radius: 6px;
+                border-top-left-radius: 6px;
+            }
+        }
+    }
+}

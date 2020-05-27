@@ -25,7 +25,7 @@ export class Product extends React.Component {
 
         return (
             <div class="container" ref={this.props.containerRef}>
-            <div class="top-container">
+            <div class="header">
 	        </div>
           	<div class="section section-gray">
                 <div class="section-content">

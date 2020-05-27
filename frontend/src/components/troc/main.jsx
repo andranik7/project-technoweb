@@ -10,6 +10,8 @@ import { FiInfo } from 'react-icons/fi';
 import { IoMdContact } from 'react-icons/io';
 import exchangeImg from "../../assets/exchange.svg"
 import Grid from '@material-ui/core/Grid';
+import {ProductCard} from './product-card';
+
 
 export class ProductList extends React.Component {
     constructor(props) {
@@ -25,7 +27,7 @@ export class ProductList extends React.Component {
 
         return (
           <div class="container" ref={this.props.containerRef}>
-            <div class="top-container">
+            <div class="header">
 			<Grid container spacing={10} direction="rows" alignItems="center" justify="center" style={{ minHeight: '100px' }}> 
             	<Grid item md={6} >
               		<div className="image">
@@ -47,24 +49,8 @@ export class ProductList extends React.Component {
     		/>
           	<div class="product-grid product-grid--flexbox">
 			<div class="product-grid__wrapper">
-				<div class="product-grid__product-wrapper">
-					<div class="product-grid__product">
-						<div class="product-grid__img-wrapper">			
-							<img src={macbookImg} alt="Img" class="product-grid__img" />
-						</div>
-						<span class="product-grid__title">MacBook </span>
-						<span class="product-grid__price"></span>
-						<div class="product-grid__extend-wrapper">
-							<div class="product-grid__extend">
-								<p class="product-grid__description">Macbook à troquer contre autre PC.</p>
-								<span className="product-grid__btn">
-                                	<Button className="btn-purple" variant='primary'onClick={()=> this.setState({addModalShow: true})}><IoMdContact/>  Contacter </Button>
-                                    <ContactInfo show={this.state.addModalShow} onHide={addModalClose}></ContactInfo></span>          
-								<span className="product-grid__btn"><Button className="btn-white" variant="outline-secondary"><FiInfo/>  Plus d'infos </Button></span>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<ProductCard></ProductCard>
 
 				<div class="product-grid__product-wrapper">
 					<div class="product-grid__product">
