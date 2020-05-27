@@ -1,0 +1,25 @@
+.page-footer {  
+    background-color: #3f51b5 !important;
+    bottom:0px !important;
+    position: static !important;
+    bottom:0px !important;
+    width:100% !important;
+    box-shadow: inset 0px 12px 15px -8px rgb(71, 74, 97);
+    
+    .title {
+        font-size:14px !important;
+    }
+    font-size:12px !important;
+    color: rgb(255, 255, 255) !important;
+    .footer-copyright {
+        margin-top:-20px !important;
+        padding:5px !important;
+        padding-bottom :15px !important;
+        color: rgb(255, 255, 255) !important;
+        
+        .isep {
+            padding-bottom:8px;
+        }
+    }
+}
+

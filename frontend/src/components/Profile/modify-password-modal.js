@@ -9,9 +9,12 @@ export class ModifyPwd extends Component{
     constructor(props){
         super(props);
 
+
     }
 
     render() {
+
+
         return(
             <Modal
             {...this.props}
