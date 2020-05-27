@@ -16,7 +16,7 @@ export class Profile extends React.Component {
 
       this.state = {addModalShow : false}
 
-    }
+    } 
 
     render() {
 

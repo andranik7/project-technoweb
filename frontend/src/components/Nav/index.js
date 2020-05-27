@@ -121,6 +121,7 @@ export default function PrimarySearchAppBar() {
             onClose={handleMenuClose}
         >
             <MenuItem onClick={handleMenuClose}>Se connecter</MenuItem>
+            <MenuItem onClick={handleMenuClose}>Mon profil</MenuItem>
         </Menu>
     );
 

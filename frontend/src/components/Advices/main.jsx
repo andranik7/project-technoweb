@@ -44,8 +44,6 @@ export class AdviceList extends React.Component {
                 <div class="main-content">
                     <div><CarouselPage></CarouselPage></div>
                 </div>
-                <div class="footer">    
-                </div>
             </div>
 
         );

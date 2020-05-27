@@ -6,14 +6,21 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Grid from '@material-ui/core/Grid';
 import './connexion.scss';
 import {Button} from 'react-bootstrap'
+import {ForgotPwd} from './forgot-pwd-modal';
+import { IconContext } from "react-icons";
+import {RiLockPasswordLine} from 'react-icons/ri';
 
 export class Login extends React.Component {
     constructor(props) {
       super(props);
 
+      this.state = {addModalShow : false}
+
     }
 
     render() {
+
+      let addModalClose=() => this.setState({addModalShow:false});
 
         return (
         <div className="container">
@@ -25,7 +32,14 @@ export class Login extends React.Component {
               </Grid>
             <Grid item md={6}>
           <div className="base-container" ref={this.props.containerRef}>
-            <div className="header">Connexion</div>
+            <div className="header">
+              <div class="icon">
+                <IconContext.Provider value={{ color:"white" }}>
+                  <div> <RiLockPasswordLine style={{ backgroundColor: '#3f51b5', padding : "20px", borderRadius:"20px" }} /></div>
+                </IconContext.Provider>
+              </div> 
+              Connexion
+            </div>
             <div className="content">
               <form>
                 <div className="form-group">
@@ -46,8 +60,9 @@ export class Login extends React.Component {
               </form>
             </div>            
             <div className="links">
-              <Link href="#" >
+              <Link href="#" onClick={()=> this.setState({addModalShow: true})}>
                 {"Mot de passe oublié ? "}
+              <ForgotPwd show={this.state.addModalShow} onHide={addModalClose}></ForgotPwd> 
               </Link> 
               <text>  |  </text>
               <Link href="#" > 
