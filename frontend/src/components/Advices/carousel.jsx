@@ -11,7 +11,7 @@ const CarouselPage = () => {
     <MDBContainer>
       <MDBCarousel
         activeItem={1}
-        length={1}
+        length={2}
         showControls={true}
         showIndicators={true}
         className="">

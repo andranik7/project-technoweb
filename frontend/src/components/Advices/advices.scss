@@ -13,7 +13,17 @@
 }
 
 .carousel-control-prev-icon {
-    background-image: url();
+	background-image: url(../../assets/before.png) !important;
+	margin-left:-20px !important;
+	left:0px !important;
+	position: absolute !important;
+}
+
+.carousel-control-next-icon {
+	background-image: url(../../assets/next.png) !important;
+	margin-right:-20px !important;
+	right:0px !important;
+	position: absolute !important;
 }
 
 .card {
