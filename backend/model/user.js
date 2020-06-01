@@ -16,7 +16,9 @@ const genHash = function (password, salt) {
 }
 
 const userSchema = new Schema({
-    name: String,
+    prenom: String,
+    nom: String,
+
     email: {
         type: String,
         required: true,
@@ -26,6 +28,9 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+
+    kind: String,
+
     date: {
         type: Date,
         default: new Date()

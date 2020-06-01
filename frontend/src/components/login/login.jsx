@@ -10,7 +10,7 @@ import { ForgotPwd } from './forgot-pwd-modal';
 import { IconContext } from "react-icons";
 import { RiLockPasswordLine } from 'react-icons/ri';
 import APIService from '../../services/APIService'
-
+import storeUser from '../../helpers/storeUser'
 
 export class Login extends React.Component {
   constructor(props) {
@@ -27,7 +27,9 @@ export class Login extends React.Component {
   login = () => {
     if (this.state.email.length > 4 && this.state.password.length > 5) {
       this.apiService.login(this.state.email, this.state.password).then(res => {
-        console.log(res.data)
+        if (res.data.success) {
+          storeUser(res.data.user);
+        }
       })
     } else {
       alert("Merci de fournir un email valide et un mot de passe supérieur à 5 caractères")
@@ -81,7 +83,7 @@ export class Login extends React.Component {
                   <ForgotPwd show={this.state.addModalShow} onHide={addModalClose}></ForgotPwd>
                 </Link>
                 <text>  |  </text>
-                <Link href="#" >
+                <Link href="/register" >
                   {"Inscrivez-vous !"}
                 </Link>
               </div>

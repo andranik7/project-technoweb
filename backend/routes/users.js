@@ -9,7 +9,9 @@ router.post('/register', (req, res) => {
   let newUser = req.body
   console.log(req.body)
   let u = new User();
-  u.name = newUser.name;
+  u.prenom = newUser.prenom;
+  u.nom = newUser.nom;
+  u.kind = newUser.kind;
   u.email = newUser.email;
   u.password = newUser.password;
   u.save((err, user) => {
