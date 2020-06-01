@@ -113,7 +113,6 @@ export default class index extends Component {
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         Consulter les trocs, créer un troc et bien plus
-
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>

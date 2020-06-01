@@ -23,4 +23,15 @@ export default class APIService {
     register = (credentials) => {
         return axios.post(this.url + '/users/register', credentials)
     }
+
+
+    // service pour créer un conseil
+    createAdvice = (data) => {
+        return axios.post(this.url + '/advice/createAdvice', data)
+    }
+
+    // service pour récupérer les conseils
+    getAdvices = () => {
+        return axios.get(this.url + '/advice/getAdvices')
+    }
 }
