@@ -16,6 +16,7 @@ import { ProductList } from './components/troc/main';
 import { Product } from './components/troc/product';
 import { AdviceList } from './components/Advices/main';
 import { Profile } from './components/Profile/profile';
+import Dashboard from './components/Dashboard'
 import ResetPwd from "./components/login/reset-pwd";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/reset-password">
             <ResetPwd />
           </Route>
+          <Route path="/dashboard" component={Dashboard} />
           <Route path="/">
             <Home />
           </Route>

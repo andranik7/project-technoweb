@@ -17,4 +17,10 @@ export default class APIService {
     login = (email, password) => {
         return axios.post(this.url + '/users/login', { email, password })
     }
+
+
+    // service pour créer un compte
+    register = (credentials) => {
+        return axios.post(this.url + '/users/register', credentials)
+    }
 }

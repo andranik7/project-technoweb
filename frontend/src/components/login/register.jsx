@@ -10,10 +10,18 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import APIService from '../../services/APIService'
+import storeUser from '../../helpers/storeUser'
+
+
 
 export class Register extends React.Component {
+
+
   constructor(props) {
     super(props);
+    this.apiService = new APIService();
+
     this.state = {
       prenom: "",
       nom: "",
@@ -21,6 +29,8 @@ export class Register extends React.Component {
       password: "",
       kind: "Isepien"
     }
+
+
   }
 
 
@@ -29,11 +39,28 @@ export class Register extends React.Component {
   }
 
 
+  register = () => {
+    if (this.state.email.length > 4 && this.state.password.length > 5) {
+      this.apiService.register(this.state).then(res => {
+        console.log(res.data)
+        if (res.data.success) {
+          storeUser(res.data.user);
+          window.location = "/dashboard"
+        } else {
+          alert("Erreur lors de l'inscription")
+        }
+      })
+    } else {
+      alert("Merci de fournir un email valide et un mot de passe supérieur à 5 caractères")
+    }
+  }
+
   render() {
 
     return (
       //
       <div className="container">
+
         <Grid container spacing={10} direction="rows" alignItems="center" justify="center" style={{ height: '100%' }}>
           <Grid item md={6} >
             <div className="image">
@@ -45,6 +72,7 @@ export class Register extends React.Component {
               <div className="header">Inscription</div>
               <div className="content scrollable">
                 <form>
+
                   <div className="form-group">
                     <label htmlFor="firstname">Prénom</label>
                     <input type="text" name="prenom" placeholder="prénom" onChange={this.handleInputChange} />
@@ -84,7 +112,7 @@ export class Register extends React.Component {
                       label="Se souvenir de moi"
                       text-align="left" />
                   </div>
-                  <Button className="btn-purple" variant="primary" type="submit">S'inscrire</Button>
+                  <Button className="btn-purple" variant="primary" type="button" onClick={this.register}>S'inscrire</Button>
                   <div className="links">
                     <Link href="#">
                       {"Déjà inscrit ?"}
