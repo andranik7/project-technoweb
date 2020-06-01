@@ -10,6 +10,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import profileImg from "../../assets/profile.svg";
+import manIdeaImg from "../../assets/man_idea.svg";
+import exchangeImg from "../../assets/exchange.svg"
 
 
 export default class index extends Component {
@@ -38,7 +40,7 @@ export default class index extends Component {
                     Bienvenue sur votre dashboard {this.state.user && this.state.user.prenom}!
                 </Typography>
                 <Grid container spacing={3}>
-                    <Grid item xs={3}>
+                    <Grid item md={3}>
                         <Card style={{ margin: "20px" }} onClick={() => this.props.history.push('/profile')}>
                             <CardActionArea>
                                 <CardMedia
@@ -57,47 +59,61 @@ export default class index extends Component {
                             </CardActionArea>
                         </Card>
                     </Grid>
-                    <Grid item xs={3}>
-                        <Card style={{ margin: "20px" }}>
+                    <Grid item md={3}>
+                        <Card style={{ margin: "20px" }} onClick={() => this.props.history.push('/conseils')}>
                             <CardActionArea>
+                                <CardMedia
+                                    style={{ height: "140px" }}
+                                    image={manIdeaImg}
+                                    title="Contemplative Reptile"
+                                />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
+                                        Conseils
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                        across all continents except Antarctica
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={3}>
+                                        Consulter les conseils, demandez des conseils et bien plus
 
-                        <Card style={{ margin: "20px" }}>
-                            <CardActionArea>
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                        across all continents except Antarctica
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
                         </Card>
                     </Grid>
-                    <Grid item xs={3}>
-                        <Card style={{ margin: "20px" }}>
+                    <Grid item md={3}>
+
+                        <Card style={{ margin: "20px" }} onClick={() => this.props.history.push('/product')}>
                             <CardActionArea>
+                                <CardMedia
+                                    style={{ height: "140px" }}
+                                    image={profileImg}
+                                    title="Contemplative Reptile"
+                                />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        Lizard
+                                        Produits
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
-                                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                        across all continents except Antarctica
+                                        Consulter les produits, ajouter des produits et échanger des produits
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+                    <Grid item md={3}>
+                        <Card style={{ margin: "20px" }} onClick={() => this.props.history.push('/troc')}>
+                            <CardActionArea>
+                                <CardMedia
+                                    style={{ height: "140px" }}
+                                    image={exchangeImg}
+                                    title="Contemplative Reptile"
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        Troc
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        Consulter les trocs, créer un troc et bien plus
+
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
