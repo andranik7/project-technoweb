@@ -34,4 +34,15 @@ export default class APIService {
     getAdvices = () => {
         return axios.get(this.url + '/advice/getAdvices')
     }
+
+    // service pour ajouter un produit
+    addProduct = (titre, prix, description, userId) => {
+        return axios.post(this.url + '/produit/createProduct', { titre, prix, description, userId })
+    }
+
+    // service pour récupérer les produits
+
+    getProducts = () => {
+        return axios.get(this.url + '/produit/allProducts')
+    }
 }

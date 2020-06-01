@@ -18,6 +18,8 @@ import { AdviceList } from './components/Advices/main';
 import { Profile } from './components/Profile/profile';
 import Dashboard from './components/Dashboard'
 import ResetPwd from "./components/login/reset-pwd";
+import AddProduct from './components/troc/addProduct'
+
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route path="/product">
             <Product />
           </Route>
+          <Route path="/addProduct" component={AddProduct} />
           <Route path="/conseils">
             <AdviceList />
           </Route>

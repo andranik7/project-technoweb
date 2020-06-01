@@ -7,12 +7,13 @@ var Produit = require('../model/produit').Produit
 // route poour créer un produit
 router.post('/createProduct', (req, res) => {
     try {
-        console.log(req.body)
+
         let newProduct = req.body;
         let p = new Produit()
-        p.proprietaire = newProduct.proprietaire;
-        p.nom = newProduct.nom;
-        p.caracteristiques = newProduct.caracteristiques;
+        p.proprietaire = newProduct.userId;
+        p.titre = newProduct.titre;
+        p.description = newProduct.description;
+        p.prix = parseFloat(newProduct.prix);
         p.save((err, produit) => {
             if (!err) {
                 res.json({
@@ -62,7 +63,7 @@ router.get('/getProduct/:produitId', (req, res) => {
 // route pour obtenir tous les produits
 router.get('/allProducts', (req, res) => {
     try {
-        Produit.find({}).exec((err, produits) => {
+        Produit.find({}).populate('proprietaire').exec((err, produits) => {
             res.json({
                 success: true,
                 produits: produits

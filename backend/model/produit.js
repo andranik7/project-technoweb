@@ -8,9 +8,11 @@ const produitSchema = new Schema({
         ref: 'User'
     },
 
-    nom: String,
+    titre: String,
 
-    caracteristiques: String,
+    prix: Number,
+
+    description: String,
 
     date: {
         type: Date,
