@@ -10,13 +10,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Login from "./components/Login/login.jsx";
-import Register from "./components/Login/register.jsx";
-import { ProductList } from './components/Troc/main';
-import { Product } from './components/Troc/product';
+import Login from "./components/login/login";
+import Register from "./components/login/register";
+import { ProductList } from './components/troc/main';
+import { Product } from './components/troc/product';
 import { AdviceList } from './components/Advices/main';
 import { Profile } from './components/Profile/profile';
-import ResetPwd from  "./components/Login/reset-pwd.jsx";
+import ResetPwd from "./components/login/reset-pwd";
 
 function App() {
   return (
@@ -24,33 +24,33 @@ function App() {
       <Nav />
       <Router>
         <Switch>
-         <Route path="/login">
-           <Login /> 
-         </Route>
-         <Route path="/register">
-           <Register /> 
-         </Route>
-         <Route path="/troc">
-           <ProductList /> 
-         </Route>
-         <Route path="/product">
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/troc">
+            <ProductList />
+          </Route>
+          <Route path="/product">
             <Product />
           </Route>
           <Route path="/conseils">
-           <AdviceList /> 
-         </Route>
-         <Route path="/profile">
-           <Profile /> 
-         </Route>
-         <Route path="/reset-password">
-           <ResetPwd /> 
-         </Route>
+            <AdviceList />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+          <Route path="/reset-password">
+            <ResetPwd />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </Router>
-      <Footer/>
+      <Footer />
 
     </div>
   );

@@ -11,4 +11,10 @@ export default class APIService {
     testRequest = (params) => {
         return axios.post(this.url + "/users/", { params })
     }
+
+
+    // service pour se connecter
+    login = (email, password) => {
+        return axios.post(this.url + '/users/login', { email, password })
+    }
 }
