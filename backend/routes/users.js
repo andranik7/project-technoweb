@@ -8,6 +8,7 @@ var User = require('../model/user').User
 router.post('/register', (req, res) => {
   let newUser = req.body
   console.log(req.body)
+
   let u = new User();
   u.prenom = newUser.prenom;
   u.nom = newUser.nom;

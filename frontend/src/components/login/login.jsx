@@ -29,6 +29,9 @@ export class Login extends React.Component {
       this.apiService.login(this.state.email, this.state.password).then(res => {
         if (res.data.success) {
           storeUser(res.data.user);
+          window.location = "/dashboard"
+        } else {
+          alert(res.data.message)
         }
       })
     } else {

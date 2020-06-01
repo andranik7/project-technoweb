@@ -47,7 +47,7 @@ export class Register extends React.Component {
           storeUser(res.data.user);
           window.location = "/dashboard"
         } else {
-          alert("Erreur lors de l'inscription")
+          alert(res.data.message)
         }
       })
     } else {
@@ -79,7 +79,7 @@ export class Register extends React.Component {
                   </div>
                   <div className="form-group">
                     <label htmlFor="lastname">Nom</label>
-                    <input type="text" name="nom" placeholder="nom " />
+                    <input type="text" name="nom" placeholder="nom " onChange={this.handleInputChange} />
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Adresse e-mail</label>
