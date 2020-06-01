@@ -1,5 +1,4 @@
-import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import React, { useState, useEffect } from 'react'; import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -91,7 +90,16 @@ export default function PrimarySearchAppBar() {
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+    const [user, setUser] = useState(null)
 
+
+    useEffect(() => {
+        let u = localStorage.user;
+        if (u) {
+            console.log(u)
+            setUser(JSON.parse(u))
+        }
+    }, [])
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -108,7 +116,10 @@ export default function PrimarySearchAppBar() {
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
     };
-
+    const logout = () => {
+        localStorage.clear()
+        window.location = '/'
+    }
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
         <Menu
@@ -120,8 +131,15 @@ export default function PrimarySearchAppBar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={() => window.location = "/login"}>Se connecter</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Mon profil</MenuItem>
+            {user ?
+                <>
+                    <MenuItem onClick={() => window.location = "/dashboard"}>Mon dashboard</MenuItem>
+                    <MenuItem onClick={logout}>Déconnexion</MenuItem>
+
+                </>
+                : <MenuItem onClick={() => window.location = "/login"}>Me connecter</MenuItem>
+            }
+
         </Menu>
     );
 
