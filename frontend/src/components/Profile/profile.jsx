@@ -76,6 +76,7 @@ export class Profile extends React.Component {
                                 </Table>
                                 <div class="modify">
                                     <Button className="btn-purple" variant='primary' onClick={() => this.setState({ addModalShow: true })}> <TiPencil />  Modifier </Button>
+
                                     <ModifyProfile show={this.state.addModalShow} onHide={addModalClose}></ModifyProfile>
                                 </div>
                             </div>

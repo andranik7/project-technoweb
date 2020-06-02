@@ -50,4 +50,9 @@ export default class APIService {
         return axios.get(this.url + '/produit/getMyProducts/' + userId)
     }
 
+    // service pour reset password
+    resetPassword = (password, newPassword, email) => {
+        return axios.post(this.url + '/users/resetPassword', { password, newPassword, email })
+    }
+
 }

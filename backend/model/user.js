@@ -48,6 +48,12 @@ userSchema.pre('save', function (next) {
 })
 
 
+userSchema.methods.resetPassword = function (password) {
+    this.salt = genSalt()
+    this.password = genHash(this.password, this.salt)
+}
+
+
 userSchema.methods.validatePassword = function (password) {
     if (this.password === genHash(password, this.salt)) {
         return true

@@ -57,4 +57,37 @@ router.post('/login', (req, res) => {
   })
 })
 
+
+// route pour changer le pdp
+
+router.post('/resetPassword', (req, res) => {
+  User.findOne({ email: req.body.email }).exec((err, user) => {
+
+    if (user) {
+      // on vérifie si le mdp est correct maintenant
+      if (user.validatePassword(req.body.password)) {
+        user.resetPassword(req.body.newPassword);
+        user.save((err, doc) => {
+          if (!err) {
+            res.json({
+              success: true,
+              message: "Le mot de passe a bien été modifié"
+            })
+          }
+        })
+
+      } else {
+        res.json({
+          success: false,
+          message: "Email ou mot de passe erroné"
+        })
+      }
+    } else {
+      res.json({
+        success: false,
+        message: "Email ou mot de passe erroné"
+      })
+    }
+  })
+})
 module.exports = router;
