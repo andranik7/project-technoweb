@@ -11,7 +11,10 @@ export class ModifyProfile extends Component {
     this.state = {
       user: null,
       password: "",
-      newPassword: ""
+      newPassword: "",
+      prenom: "",
+      nom: "",
+      email: ""
     }
 
     this.apiService = new APIService()
@@ -21,7 +24,9 @@ export class ModifyProfile extends Component {
   componentDidMount() {
     let user = localStorage.user;
     if (user) {
-      this.setState({ user: JSON.parse(user) })
+      this.setState({ user: JSON.parse(user) }, () => {
+        this.setState({ prenom: this.state.user.prenom, nom: this.state.user.nom, email: this.state.user.email })
+      })
     } else {
       window.location = "/"
     }
@@ -36,6 +41,22 @@ export class ModifyProfile extends Component {
       }
     })
   }
+
+
+  updateProfile = () => {
+    this.apiService.updateProfile(this.state.prenom, this.state.nom, this.state.email, this.state.user._id).then(res => {
+      if (res.data.success) {
+        console.log(res.data)
+        localStorage.user = JSON.stringify(res.data.user)
+        this.setState({
+          user: res.data.user
+        })
+      } else {
+        alert(res.data.message)
+      }
+    })
+  }
+
 
 
   handleInputChange = (e) => {
@@ -61,29 +82,25 @@ export class ModifyProfile extends Component {
             <form id="updateprofile" className="form">
               <Table responsive>
                 <thead>
-                  <tr><h5 >Alex Martin</h5>
+                  <tr><h5 >{this.state.user && (this.state.user.prenom + " " + this.state.user.nom)}</h5>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><label htmlFor="firstname">Prénom</label></td>
-                    <td><input type="text" name="firstname" placeholder="Alex" /></td>
+                    <td><input type="text" name="prenom" placeholder={this.state.user && this.state.user.prenom} value={this.state.prenom} onChange={this.handleInputChange} /></td>
                   </tr>
                   <tr>
                     <td><label htmlFor="lastname">Nom</label></td>
-                    <td><input type="text" name="lastname" placeholder="Martin" /></td>
+                    <td><input type="text" name="nom" placeholder={this.state.user && this.state.user.nom} value={this.state.nom} onChange={this.handleInputChange} /></td>
                   </tr>
                   <tr>
                     <td><label htmlFor="email">Adresse e-mail</label></td>
-                    <td><input type="email" name="email" placeholder="alex.martin@isep.fr" /></td>
-                  </tr>
-                  <tr>
-                    <td><label htmlFor="cphone">N° de téléphone</label></td>
-                    <td><input type="cphone" name="cphone" placeholder="0666666666" /></td>
+                    <td><input type="email" name="email" placeholder={this.state.user && this.state.user.email} value={this.state.email} onChange={this.handleInputChange} /></td>
                   </tr>
                 </tbody>
               </Table>
-              <Button className="btn-purple" variant='primary' type="submit"><IoIosSave /> Enregistrer </Button>
+              <Button className="btn-purple" variant='primary' type="button" onClick={this.updateProfile}><IoIosSave /> Enregistrer </Button>
             </form>
 
 

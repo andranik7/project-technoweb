@@ -90,4 +90,35 @@ router.post('/resetPassword', (req, res) => {
     }
   })
 })
+
+
+
+router.post('/updateProfile', (req, res) => {
+  User.findById(req.body.userId).exec((err, user) => {
+
+    if (user) {
+      user.prenom = req.body.prenom
+      user.nom = req.body.prenom
+      user.email = req.body.email
+      user.save((err, doc) => {
+        if (!err) {
+          res.json({
+            success: true,
+            user: doc
+          })
+        } else {
+          res.json({
+            success: false,
+            message: "Erreur"
+          })
+        }
+      })
+    } else {
+      res.json({
+        success: false,
+        message: "User doesn't exist"
+      })
+    }
+  })
+})
 module.exports = router;

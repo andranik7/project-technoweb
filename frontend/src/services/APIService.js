@@ -55,4 +55,10 @@ export default class APIService {
         return axios.post(this.url + '/users/resetPassword', { password, newPassword, email })
     }
 
+    // service pour mettre à jour le profil
+    updateProfile = (prenom, nom, email, userId) => {
+        return axios.post(this.url + '/users/updateProfile', { prenom, nom, email, userId })
+
+    }
+
 }
