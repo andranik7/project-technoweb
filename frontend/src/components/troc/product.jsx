@@ -9,15 +9,36 @@ import { BsArrowRepeat } from 'react-icons/bs'
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { Msg } from './troc-modal'
 import womanSearchImg from "../../assets/woman_search.svg"
+import APIService from '../../services/APIService'
+import defaultImg from "../../assets/default-product-img.png";
 
 
 export class Product extends React.Component {
     constructor(props) {
         super(props);
+        this.apiService = new APIService();
 
-        this.state = { addModalShow: false }
+        this.state = { addModalShow: false, produits: [], user: null }
     }
 
+
+    componentDidMount() {
+
+        let u = localStorage.user;
+        if (u) {
+            this.setState({ user: JSON.parse(u) }, () => {
+                this.apiService.getMyProducts(this.state.user._id).then(res => {
+                    console.log(res.data)
+                    if (res.data.success) {
+                        this.setState({ produits: res.data.produits })
+                    }
+                })
+            })
+        } else {
+            window.location = "/"
+        }
+
+    }
 
     render() {
 
@@ -98,13 +119,63 @@ export class Product extends React.Component {
                                 <button class="btn">Echanger</button></div>*/}
                                     <div class="buttons">
                                         <Button className="btn-purple" variant='primary' onClick={() => this.setState({ addModalShow: true })}><BsArrowRepeat /> Troquer </Button>
-                                        <Msg show={this.state.addModalShow} onHide={addModalClose}></Msg>
+                                        <Msg show={this.state.addModalShow} onHide={addModalClose} ></Msg>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                {this.state.produits.map((produit, index) => (
+                    <div class="section section-gray" key={"produit" + index}>
+                        <div class="section-content">
+                            <div class="product-details">
+                                <ul class="product-images">
+                                    <MDBContainer>
+                                        <MDBCarousel
+                                            activeItem={1}
+                                            length={1}
+                                            showControls={true}
+                                            showIndicators={true}
+                                            className="z-depth-1">
+                                            <MDBCarouselInner>
+                                                <MDBCarouselItem itemId="1">
+                                                    <MDBView>
+                                                        <img src={defaultImg} alt="Img" />
+                                                    </MDBView>
+                                                </MDBCarouselItem>
+                                            </MDBCarouselInner>
+                                        </MDBCarousel>
+                                    </MDBContainer>
+                                </ul>
+                                <ul class="product-info">
+                                    <li class="product-name">{produit.titre} - {produit.prix} €</li>
+                                    <li class="product-owner"><span>par </span><span class="owner">{produit.proprietaire.prenom} {produit.proprietaire.nom}</span></li>
+                                    <li class="product-date"><span>le </span><span class="owner">{produit.date.split('T')[0]}</span></li>
+
+                                    <li class="product-description">
+                                        <p>{produit.description}</p>
+                                        <p></p>
+                                    </li>
+                                    <li class="product-condition">
+                                        <div class="condition">Etat :</div>
+                                        <div class="condition">Bon </div>
+                                    </li>
+                                    <li class="product-addtocart">
+                                        {/*<div class="buttons">
+                                                <button class="btn">Echanger</button></div>*/}
+                                        <div class="buttons">
+                                            <Button className="btn-purple" variant='primary' onClick={() => this.setState({ addModalShow: true })}><BsArrowRepeat /> Troquer </Button>
+                                            <Msg show={this.state.addModalShow} onHide={addModalClose} proprietaire={produit.proprietaire}></Msg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                ))}
 
                 <div className="footer">
                     <img src={womanSearchImg} />

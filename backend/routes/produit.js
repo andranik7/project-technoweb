@@ -77,4 +77,22 @@ router.get('/allProducts', (req, res) => {
     }
 })
 
+// router pour récupérer mes produits
+
+// route pour obtenir tous les produits
+router.get('/getMyProducts/:userId', (req, res) => {
+    try {
+        Produit.find({ proprietaire: req.params.userId }).populate('proprietaire').exec((err, produits) => {
+            res.json({
+                success: true,
+                produits: produits
+            })
+        })
+    } catch (e) {
+        res.json({
+            success: false,
+            error: e
+        })
+    }
+})
 module.exports = router;

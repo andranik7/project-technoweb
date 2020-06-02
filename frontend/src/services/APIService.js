@@ -41,8 +41,13 @@ export default class APIService {
     }
 
     // service pour récupérer les produits
-
     getProducts = () => {
         return axios.get(this.url + '/produit/allProducts')
     }
+
+    // service pour récupérer mes produits
+    getMyProducts = (userId) => {
+        return axios.get(this.url + '/produit/getMyProducts/' + userId)
+    }
+
 }

@@ -96,7 +96,7 @@ export class ProductList extends React.Component {
 											<p class="product-grid__description">{produit.description}</p>
 											<span className="product-grid__btn">
 												<Button className="btn-purple" variant='primary' onClick={() => this.setState({ addModalShow: true })}><IoMdContact />  Contacter </Button>
-												<ContactInfo show={this.state.addModalShow} onHide={addModalClose} proprietaire={produit.proprietaire}></ContactInfo></span>
+												<ContactInfo show={this.state.addModalShow} onHide={addModalClose} ></ContactInfo></span>
 											<span className="product-grid__btn"><Button className="btn-white" variant="outline-secondary"><FiInfo />  Plus d'infos </Button></span>
 										</div>
 									</div>
